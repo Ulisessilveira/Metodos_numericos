@@ -1,0 +1,4 @@
+.buttonSiguiente{
+    -fx-background-radius: 100px;
+    -fx-background-image: url("img/flecha_2.png");
+}

@@ -1,0 +1,15 @@
+.degradado{
+    -fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    -fx-background-radius: 10;
+}
+.boton{
+    -fx-background-color: #008793;
+    -fx-background-radius: 10;
+}
+.rendondo{
+    -fx-background-radius: 10;
+}
+.transparente{
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+ }

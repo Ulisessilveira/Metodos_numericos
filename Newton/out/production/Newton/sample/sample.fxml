@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #131c21;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #2a2f32;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="103.0" prefWidth="282.0">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="86.0" text="Newton" textFill="#b1b3b5">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label text="Sistema de ecuaciones NO lineales" textFill="#b1b3b5">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox prefHeight="103.0" prefWidth="149.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="116.0" text="José Ulises" textAlignment="RIGHT" textFill="#00af9c">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="BOTTOM_RIGHT" prefHeight="21.0" prefWidth="116.0" text="Silveira Trejo" textAlignment="CENTER" textFill="#00af9c">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="145.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                        <VBox prefHeight="170.0" prefWidth="257.0">
+                           <children>
+                              <TextField fx:id="txtf1" alignment="CENTER" prefHeight="25.0" prefWidth="139.0" promptText="f1">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txtf2" alignment="CENTER" prefHeight="25.0" prefWidth="139.0" promptText="f2">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <HBox prefHeight="25.0" prefWidth="130.0">
+                                 <children>
+                                    <TextField fx:id="txtxi" alignment="CENTER" promptText="Xi">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="txtyi" alignment="CENTER" promptText="Yi">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <TextField fx:id="txtTolerancia" alignment="CENTER" promptText="Tolerancia">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="145.0" prefWidth="219.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <TextField fx:id="txtA" alignment="CENTER" promptText="A">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txtB" alignment="CENTER" promptText="B">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txtC" alignment="CENTER" promptText="C">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="txtD" alignment="CENTER" promptText="D">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="145.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="23.0" prefWidth="500.0">
+                     <children>
+                        <Pane prefHeight="25.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="button1" onAction="#insertarDatos" text="Insertar en tabla" textFill="#00af9c">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="23.0" />
+                           </font>
+                        </JFXButton>
+                        <Pane prefHeight="25.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableView" prefHeight="183.0" prefWidth="440.0">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox prefHeight="43.0" prefWidth="480.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <JFXButton onAction="#limpiar" text="Limpiar" textFill="#00af9c">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="button2" disable="true" onAction="#siguiente" prefHeight="25.0" prefWidth="35.0" styleClass="buttonSiguiente" stylesheets="@estilos.css" textFill="#00af9c">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

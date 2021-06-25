@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="720.0" prefWidth="1215.0" styleClass="fondoPrincipal" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.principal.Controller">
+   <top>
+      <HBox prefHeight="70.0" prefWidth="1215.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="531.0" styleClass="sombra" text="INTERPOLACIÓN Y AJUSTES DE FUNCIONES" textFill="#e8e8e8">
+               <font>
+                  <Font name="Barlow Condensed SemiBold" size="32.0" />
+               </font>
+            </Label>
+            <Pane cache="true" maxHeight="-Infinity" prefHeight="2.0" prefWidth="200.0" styleClass="linea" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="20.0" top="29.0" />
+               </HBox.margin>
+            </Pane>
+            <JFXButton onAction="#cerrar" prefHeight="50.0" prefWidth="50.0" styleClass="botonSalir">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="633.0" prefWidth="290.0" styleClass="menu" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="274.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="sombra">
+                     <image>
+                        <Image url="@../img/icons8_boy_48px_2.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="80.0" prefWidth="416.0">
+                     <children>
+                        <Label styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Usuario:" textFill="#d9dcd6">
+                           <font>
+                              <Font name="Barlow Condensed SemiBold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbNombre" prefHeight="24.0" prefWidth="264.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Ulises" textFill="#d9dcd6">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane maxHeight="-Infinity" prefHeight="2.0" prefWidth="200.0" styleClass="linea">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Pane>
+            <JFXButton fx:id="btnLangrange" onAction="#btnLangrage" onMouseEntered="#mensaje" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #f7a20c;" styleClass="botonGeneral" stylesheets="@../estilos/estilos.css" text="Interpolación Langrange" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Label fx:id="lbA1" alignment="CENTER" prefHeight="24.0" prefWidth="264.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="El metodo de Langrange solo se puede" textFill="RED" visible="false">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbA2" alignment="CENTER" prefHeight="24.0" prefWidth="264.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="utilizar para el segundo orden" textFill="RED" visible="false">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="327.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Minimo cuadrado" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton onAction="#elineal" prefHeight="80.0" prefWidth="345.0" style="-fx-background-color: #f7a20c;" styleClass="botonGeneral" stylesheets="@../estilos/estilos.css" text="Correlación lineal" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#btnCuadratico" prefHeight="80.0" prefWidth="345.0" style="-fx-background-color: #f7a20c;" styleClass="botonGeneral" stylesheets="@../estilos/estilos.css" text="Correlación cuadratica" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Pane prefHeight="0.0" prefWidth="274.0" VBox.vgrow="ALWAYS" />
+            <Pane maxHeight="-Infinity" prefHeight="2.0" prefWidth="200.0" styleClass="linea">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Pane>
+            <JFXButton alignment="CENTER" onAction="#limpiar" prefHeight="25.0" prefWidth="329.0" style="-fx-background-color: #f7a20c;" styleClass="botonGeneral" text="Limpiar todo" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="70.0" right="70.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Barlow Condensed Regular" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="216.0" prefWidth="671.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets right="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="170.0" prefWidth="401.0" styleClass="menu">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="145.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Datos: " textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="28.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="39.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXTextField fx:id="txtProyeccion" alignment="CENTER" focusColor="#004d7a" prefHeight="25.0" prefWidth="268.0" promptText="Nombre proyección" styleClass="txtDatos" unFocusColor="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Pane prefHeight="39.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="505.0">
+                           <children>
+                              <Pane prefHeight="32.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXTextField fx:id="txtdatos" alignment="CENTER" focusColor="#004d7a" promptText="Cantidad de datos" styleClass="txtDatos" unFocusColor="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Pane prefHeight="32.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXTextField fx:id="txteX" alignment="CENTER" focusColor="#004d7a" promptText="Etiqueta X" styleClass="txtDatos" unFocusColor="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Pane prefHeight="32.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXTextField fx:id="txteY" alignment="CENTER" focusColor="#004d7a" promptText="Etiqueta Y" styleClass="txtDatos" unFocusColor="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Pane prefHeight="32.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="44.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXButton onAction="#capturar" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #f7a20c;" styleClass="botonGeneral" text="Capturar datos" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <Pane prefHeight="44.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="170.0" prefWidth="497.0" styleClass="menu">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="145.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Ecuación:" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbEcuacion" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="531.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="28.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Pane prefHeight="0.0" prefWidth="319.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="486.0" prefWidth="885.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets right="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="440.0" prefWidth="275.0" styleClass="menu">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="145.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Tabla: " textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="28.0" />
+                           </font>
+                        </Label>
+                        <GridPane prefHeight="125.0" prefWidth="258.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="lbX" alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="118.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="X" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbY" alignment="CENTER" contentDisplay="CENTER" prefHeight="96.0" prefWidth="129.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Y" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <ScrollPane fx:id="scrollPane" prefHeight="432.0" prefWidth="350.0" styleClass="transparente">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <content>
+                              <HBox prefHeight="100.0" prefWidth="250.0">
+                                 <children>
+                                    <Pane prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                                    <VBox fx:id="contenedorX" prefHeight="100.0" prefWidth="100.0" />
+                                    <Pane prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                                    <VBox fx:id="contenedorY" prefHeight="200.0" prefWidth="100.0" />
+                                    <Pane prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </content></ScrollPane>
+                        <HBox prefHeight="305.0" prefWidth="244.0">
+                           <children>
+                              <Pane prefHeight="25.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXButton onAction="#graficarDatos" prefHeight="50.0" prefWidth="55.0" styleClass="botonGrafica" />
+                              <Pane prefHeight="72.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXButton onAction="#limpiarGrafica" prefHeight="50.0" prefWidth="55.0" styleClass="botonLimpiar" />
+                              <Pane prefHeight="25.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" right="7.0" top="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <GridPane prefHeight="120.0" prefWidth="258.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="txtX" editable="false" styleClass="txt" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="txtY" editable="false" styleClass="txt" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <HBox prefHeight="194.0" prefWidth="258.0">
+                           <children>
+                              <Pane prefHeight="46.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXButton fx:id="btnC" alignment="CENTER" contentDisplay="CENTER" disable="true" onAction="#nuevoDato" style="-fx-background-color: #f7a20c;" styleClass="botonGeneral" text="Calcular &quot;Y&quot; e insertar en grafica" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <Pane prefHeight="46.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="440.0" prefWidth="583.0" styleClass="menu">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="lbGrafica" prefHeight="36.0" prefWidth="548.0" styleClass="sombra" stylesheets="@../estilos/estilos.css" text="Grafica:" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="28.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="30.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <LineChart fx:id="lineChart" legendVisible="false" stylesheets="@../estilos/grafica.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" styleClass="sombra" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

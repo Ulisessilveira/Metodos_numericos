@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="112.0" layoutY="30.0" text="Metodo de Gauss-Jordan">
+         <font>
+            <Font name="Barlow Condensed Regular" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txta1" layoutX="80.0" layoutY="162.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtb1" layoutX="163.0" layoutY="162.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtc1" layoutX="247.0" layoutY="162.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtr1" layoutX="337.0" layoutY="162.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="115.0" layoutY="138.0" text="a" />
+      <Label layoutX="198.0" layoutY="138.0" text="b" />
+      <Label layoutX="282.0" layoutY="138.0" text="c" />
+      <TextField fx:id="txta2" layoutX="80.0" layoutY="197.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtb2" layoutX="163.0" layoutY="197.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtc2" layoutX="247.0" layoutY="197.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtr2" layoutX="337.0" layoutY="197.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txta3" layoutX="80.0" layoutY="238.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtb3" layoutX="163.0" layoutY="238.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtc3" layoutX="247.0" layoutY="238.0" prefHeight="25.0" prefWidth="70.0" />
+      <TextField fx:id="txtr3" layoutX="337.0" layoutY="238.0" prefHeight="25.0" prefWidth="70.0" />
+      <Button layoutX="199.0" layoutY="302.0" mnemonicParsing="false" onAction="#calcular" prefHeight="25.0" prefWidth="96.0" text="Calcular" />
+      <VBox layoutX="-1.0" layoutY="352.0" prefHeight="98.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lbA" alignment="CENTER" prefHeight="45.0" prefWidth="500.0" text="Label">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbB" alignment="CENTER" prefHeight="45.0" prefWidth="500.0" text="Label">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbC" alignment="CENTER" prefHeight="45.0" prefWidth="500.0" text="Label">
+               <font>
+                  <Font name="Barlow Condensed Regular" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
